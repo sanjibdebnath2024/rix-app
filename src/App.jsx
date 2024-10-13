@@ -14,11 +14,11 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/rix-app/",
       element: <Home />,
     },
     {
-      path: "/form",
+      path: "/rix-app/form",
       element: <Form />,
     },
   ]);
