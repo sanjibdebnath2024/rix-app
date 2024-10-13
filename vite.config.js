@@ -11,8 +11,8 @@ export default defineConfig({
   // }
 
   plugins: [react()],
-  build: {
-    base: '/rix-app/', // Replace with the actual repository name if deploying on GitHub Pages
+  base: '/rix-app/', // Replace with the actual repository name if deploying on GitHub Pages
+  build: {    
     outDir: 'dist',
     chunkSizeWarningLimit: 1500,
   },
