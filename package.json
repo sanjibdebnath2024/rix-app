@@ -1,7 +1,7 @@
 {
   "homepage": "http://sanjibdebnath2024.github.io/rix-app",
-  "name": "new-rix",
-  "private": true,
+  "name": "rix-app",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
