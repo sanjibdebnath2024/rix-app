@@ -5,23 +5,21 @@ import Leftnav from './components/leftNav/Leftnav';
 import Home from './pages/Home';
 import Form from './pages/Form';
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+// 
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
 
-  const router = createBrowserRouter([
-    {
-      path: "/rix-app/",
-      element: <Home />,
-    },
-    {
-      path: "/rix-app/form",
-      element: <Form />,
-    },
-  ]);
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/rix-app/",
+  //     element: <Home />,
+  //   },
+  //   {
+  //     path: "/rix-app/form",
+  //     element: <Form />,
+  //   },
+  // ]);
 
 
   return (
@@ -37,7 +35,13 @@ function App() {
      
       <div className="mainContHolder">   
 
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
+    </HashRouter>
               
       </div>
 
