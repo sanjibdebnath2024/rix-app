@@ -295,7 +295,7 @@ h2{font-size: 16px !important; font-style: normal; font-weight: 400; margin-bott
 .formHolder>div label{font-size: 14px; font-style: normal; font-weight: 400; line-height: 16px; display: block; margin-bottom: 6px;}
 .formHolder>div label b{ color: #EA2A2A; font-size: 12px;}
 .phone-input-container {display: flex; align-items: center;}
-.phone-input-container>div{border-radius: 4px; background: #FFF; width:100px; margin-right:10px;}
+.phone-input-container>div{border-radius: 4px; background: #FFF; width:105px; margin-right:10px;}
 .phone-input-container>div .css-hlgwow{ padding: 2px 0 2px 10px;}
 .phone-input-container>div>div{box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); border: 1px solid #E2E3E9;}
 .phone-input-container input[type="tel"] {padding: 7px 15px; background-color: #FFF;  border-radius: 4px; border: 1px solid  #E2E3E9; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #777; flex-shrink: 1;}
