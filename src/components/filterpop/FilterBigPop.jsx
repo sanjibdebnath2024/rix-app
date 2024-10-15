@@ -30,7 +30,7 @@ return (
        <h6 className='mb-3'>Search</h6>
         <article className={`mb-3 ${styles.filterBox1}`}>
             
-            <label className="checkbox mb-12"><input type="checkbox" name="" value="" checked id="selectAll" /><span className={styles.heading}>first Name</span></label>
+            <label className="checkbox mb-12"><input type="checkbox" name="" value="" checked id="selectAll" /><span className={styles.heading}>First Name</span></label>
            <Select options={options}  className={`mb-12 ${styles.customSelect}`} />
             <input type="text"  value="Search" />
         </article>
@@ -43,7 +43,7 @@ return (
        </ul>
        </div>
        <div className={styles.filterBtnHolder}>
-        <input type='button' value="Submit" className='btn btn-primary me-3' />
+        <input type='button' value="Submit" className='btn btn-primary me-2' />
         <input type='button' value="Reset" className='btn btn-outline-primary' />
         </div>
        </div>

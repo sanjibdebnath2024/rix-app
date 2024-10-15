@@ -1,5 +1,5 @@
-import React from 'react'
-import Select from "react-select"
+import React, {useEffect } from 'react'
+import Select, { components } from "react-select"
 
 function Form() {
 
@@ -16,6 +16,41 @@ const selectCompany = [
 {value: "Alphabet Inc", label :"Alphabet Inc"},
 {value: "Amazon Web Services", label :"Amazon Web Services"}
 ]
+
+const customStyles = {
+    menu: (provided, state) => ({
+      ...provided,
+      top: '30px',  // Adjust the position here if needed
+      position: 'absolute',
+    }),
+    
+    dropdownIndicator: (provided, state) => ({
+        ...provided,
+        color: state.isFocused ? '#000' : '#666',  // Change the color of the icon
+        transform: state.selectProps.menuIsOpen ? 'rotate(180deg)' : null,  // Rotate the icon when menu is open
+        svg: {
+            height: '12px',  // Change size of the dropdown arrow (SVG icon)
+            width: '12px',
+            fill: state.isFocused ? '#000' : '#666'
+          }
+      })
+  };
+
+
+const isSticky = (e) => {    
+    const header = document.querySelector('.contentHeadHolder');
+    const findOfset = document.querySelector('.findOfset').offsetTop-72;
+    const scrollTop = window.scrollY;
+     scrollTop >= findOfset ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+};
+
+
+useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+    window.removeEventListener('scroll', isSticky);
+    };    
+});
 
 return (
 <>
@@ -61,7 +96,7 @@ return (
     </div>
 
 
-    <div className="box">
+    <div className="box findOfset" >
 
 
         <div class="contentHeadHolder">
@@ -70,7 +105,7 @@ return (
                 <span class="requiredMsg">Indicates a required field <b>*</b></span>
             </div>
             <div className='d-flex'>
-                <input type="button" className="btn btn-primary me-3" value="Save" />
+                <input type="button" className="btn btn-primary me-2" value="Save" />
                 <input type="button" className="btn btn-outline-primary" value="Cancel" />
             </div>
         </div>
@@ -84,7 +119,7 @@ return (
                 <aside><label>Email Address <b>*</b></label><input type="Email" name="" id="" /></aside>
                 <aside><label>Contact No <b>*</b></label>
                     <div class="phone-input-container">
-                        <Select options={options} defaultValue={{ label: "+91", value: 0 }} />
+                        <Select options={options} defaultValue={{ label: "+91", value: 0 }} styles={customStyles}   />
                         <input type="tel" id="phone" placeholder="Enter phone number" pattern="[0-9]{10}" />
                     </div>
                 </aside>
@@ -127,7 +162,7 @@ return (
                             id="" /><span></span>External</label></aside>
             </div>
             <div>
-                <aside><label>Internal Company Name <b>*</b></label><Select options={selectCompany} /></aside>
+                <aside><label>Internal Company Name <b>*</b></label><Select options={selectCompany}  styles={customStyles} /></aside>
                 <aside></aside>
             </div>
         </div>

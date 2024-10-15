@@ -1,5 +1,5 @@
 
-nav{ position:fixed; left:-200px; top:72px; bottom:0; background:#FFF; width:250px; padding-left:200px; overflow:hidden; transition: all 0.3s ease-in-out; z-index:3; color: #30323f;
+nav{ position:fixed; left:-200px; top:62px; bottom:0; background:#FFF; width:250px; padding-left:200px; overflow:hidden; transition: all 0.3s ease-in-out; z-index:3; color: #30323f;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 13px;

@@ -100,7 +100,7 @@ font-style: normal; font-weight:600; text-align: center; margin-right: 8px;}
 .pageHead h1{font-size: 24px; font-style: normal; font-weight: 600;}
 .pageHead span{font-size: 14px; font-style: normal;	font-weight: 400;}
 
-.box{ background-color: #FFF; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10); border-radius: 8px; overflow: hidden;}
+.box{ background-color: #FFF; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10); border-radius: 8px;}
 .box.pad0{ padding: 0; background-color: transparent;}
 
 .tableFilter{  padding: 16px;}
@@ -117,7 +117,7 @@ font-style: normal; font-weight:600; text-align: center; margin-right: 8px;}
 .filterItem span{ position: relative; padding-right: 20px; cursor: pointer;}
 .filterItem span:after{content: ''; display: block; width: 0px; height: 0px; border:3px solid transparent; border-top: 3px solid #0C9AFF; position: absolute; top: 10px; right: 0;}
 
-.filterPop{ position: absolute; left: 0; top: 30px; width:140px; background-color: #eeecec; z-index: 99; border-radius: 4px; border: 1px solid #E2E3E9;  background: #FFF; box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); padding: 10px 7px; overflow: hidden; transition: all 0.3s ease-in-out; opacity: 0; visibility: hidden; max-height: 150px; overflow-y: auto;}
+.filterPop{ position: absolute; left: 0; top: 30px; width:140px; background-color: #eeecec; z-index:85; border-radius: 4px; border: 1px solid #E2E3E9;  background: #FFF; box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); padding: 10px 7px; overflow: hidden; transition: all 0.3s ease-in-out; opacity: 0; visibility: hidden; max-height: 150px; overflow-y: auto;}
 .filterPop.filterPopShow{ opacity: 1; visibility: visible;}
  
 .filterPop strong{ display: block;  font-size: 16px;
@@ -271,7 +271,7 @@ input[type=text]:hover, input[type=text]:focus { border-color: #50D2FF !importan
 .back_button { border-radius: 4px; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 10px 0 10px 16px; gap: 6px;  text-align: center; font-size: 14px; color: #0c9aff; background: url(../src/assets/images/arrow-right.svg) no-repeat 0 50%; cursor: pointer; position: absolute; right:16px; top:18px;}
 
 
-.steps_pannel { width: 100%; position: relative;  background-color: #fff; overflow: hidden; display: flex; flex-direction: row; align-items: center; justify-content: space-between; justify-content: flex-start; padding:20px 16px; box-sizing: border-box; text-align: left; font-size: 10px; color: #b0b0b0; }
+.steps_pannel { width: 100%; position: relative; overflow: hidden; display: flex; flex-direction: row; align-items: center; justify-content: space-between; justify-content: flex-start; padding:20px 16px; box-sizing: border-box; text-align: left; font-size: 10px; color: #b0b0b0; }
 .step-txt { display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; gap: 8px; color: #fff;}
 .steps-flow { width: 25px; position: relative; height: 25px; border-radius: 50%; background-color: #fff; border: 1px solid #e2e3e9; box-sizing: border-box; color: #b0b0b0; text-align: center; line-height: 23px;}
 .step-txt.stepActive .steps-flow{ background-color: #3D3D3D; color: #FFF;}
@@ -312,12 +312,20 @@ input[type="date"]:focus, input[type="tel"]:focus, input[type="email"]:focus {bo
 /* Optional: Style the container */
 .calendar-container {display: flex; flex-direction: column; align-items: flex-start;}
 
+.is-sticky{ 
+  position: sticky;
+  top: 62px;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 5%);
+  z-index: 85;
+}
+
 /* ---------------- from CSS end ---------------- */
 
 
 @media (-webkit-device-pixel-ratio: 1.25) {
   * {
-  zoom: 0.96;
+  zoom: 0.98;
   }
 }
 @media (-webkit-device-pixel-ratio: 1.50) {
