@@ -304,11 +304,29 @@ h2{font-size: 16px !important; font-style: normal; font-weight: 400; margin-bott
 .dateHolder>*{ flex: 1 1 auto !important;}
 input[type="date"], input[type="email"] { padding: 7px 15px; background-color: #FFF; border-radius: 4px; border: 1px solid #E2E3E9;  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #777;}
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {background: #FFF url(../src/assets/images/calender.svg) no-repeat 100% 50%;}
+/* input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {background: #FFF url(../src/assets/images/calender.svg) no-repeat 100% 50%;} */
 
 input[type="date"]:focus, input[type="tel"]:focus, input[type="email"]:focus {border-color: #50D2FF !important; border-width: 1px; box-shadow: none !important;}
 
+.react-datepicker{color:#30323f; font-family: 'Lato', sans-serif; font-weight:400; font-size:13px; line-height:18px;}
+.calenderIcon{background: #FFF url(../src/assets/images/calender.svg) no-repeat 100% 50%; position: absolute; top: 4px; right: 8px;}
+.custom_date_input{}
+.custom_calendar{border-radius: 3px; border: 1px solid #CFCFCF; background: #FFF; box-shadow: 0px 6px 24px 0px rgba(115, 115, 119, 0.16); padding: 15px;}
+.react-datepicker__header{ background-color: transparent; border-bottom: none;}
+.react-datepicker__day-name{color: #A1A7C4; font-size:14px;}
+.react-datepicker__current-month{ font-weight: 500; margin-bottom: 10px !important;}
+.react-datepicker__day--outside-month{color: #A1A7C4;}
+.react-datepicker__day--selected{background: #E6F8FF;color: #28B7FF;}
+.react-datepicker__day--keyboard-selected:not([aria-disabled=true]):hover,
+.react-datepicker__day--selected:not([aria-disabled=true]):hover
+{color: #E6F8FF;background: #28B7FF;}
+.react-datepicker__navigation{ top: 15px;}
+.react-datepicker__navigation--next { right: 15px;}
+.react-datepicker__navigation--previous { left: 15px;}
+.react-datepicker__navigation-icon::before { border-color: #7E84A3; border-width: 2px 2px 0 0;}
+.react-datepicker__navigation:hover *::before {border-color: #28B7FF;}
+.react-datepicker-popper .react-datepicker__triangle {fill: #ffffff; color: #ffffff;}
 /* Optional: Style the container */
 .calendar-container {display: flex; flex-direction: column; align-items: flex-start;}
 

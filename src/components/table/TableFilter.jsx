@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 
 import FilterBigPop from '../filterpop/FilterBigPop';
@@ -20,6 +20,26 @@ const toggleFiltterPop = (b) => {
   }
 }
 
+const dropdownRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      dropdownRef.current.children[1].style.height = '0';
+      dropdownRef.current.children[1].classList.remove('filterPopShow');
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
+
+
+
+
 const showFiltterPop = () => {
   setFilterBigPopShow(!filterBigPopShow);
 }
@@ -35,7 +55,7 @@ const changeFiltterPopState = (a) => {
             <aside>
               <div className="totalFilter">Total <span>20 Users</span></div>
             <div className="filter">
-              <div className="filterItem" onClick={toggleFiltterPop}><span>Status All</span>
+              <div className="filterItem"  ref={dropdownRef} onClick={toggleFiltterPop}><span>Status All</span>
               <div className='filterPop'><strong>Status</strong><a href="#">All</a><a href="#">Active</a><a href="#">Inactive</a><a href="#">All</a><a href="#">Active</a><a href="#">Inactive</a><a href="#">All</a><a href="#">Active</a><a href="#">Inactive</a></div>
               </div>
               <div className="filterItem"><span>User Type - All</span></div>

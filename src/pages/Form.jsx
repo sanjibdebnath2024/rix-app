@@ -1,5 +1,8 @@
-import React, {useEffect } from 'react'
+import React, {useEffect, useState } from 'react'
 import Select, { components } from "react-select"
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 function Form() {
 
@@ -51,6 +54,10 @@ useEffect(() => {
     window.removeEventListener('scroll', isSticky);
     };    
 });
+
+const [startDate, setStartDate] = useState(null);
+const [endDate, setEndDate] = useState(null);
+
 
 return (
 <>
@@ -138,9 +145,26 @@ return (
             <div>
                 <aside className='dateHolder flexNone'>
                     <div><label>From</label>
-                        <input type="date" id="date" name="date" /></div>
+                    <DatePicker 
+                    selected={startDate} 
+                    onChange={(date) => setStartDate(date)} 
+                    showIcon={true} 
+                    icon={"calenderIcon"}
+                    className="custom_date_input"
+                    calendarClassName="custom_calendar"
+                    placeholderText="Select a date"
+                    />
+                        </div>
                     <div><label>To</label>
-                        <input type="date" id="date" name="date" /></div>
+                    <DatePicker 
+                    selected={endDate}  
+                    onChange={(date) => setEndDate(date)} 
+                    showIcon={true} 
+                    icon={"calenderIcon"}
+                    className="custom_date_input"
+                    calendarClassName="custom_calendar"
+                    placeholderText="Select a date"
+                    /></div>
                 </aside>
 
             </div>
