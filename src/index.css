@@ -120,13 +120,9 @@ font-style: normal; font-weight:600; text-align: center; margin-right: 8px;}
 .filterPop{ position: absolute; left: 0; top: 30px; width:140px; background-color: #eeecec; z-index:85; border-radius: 4px; border: 1px solid #E2E3E9;  background: #FFF; box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); padding: 10px 7px; overflow: hidden; transition: all 0.3s ease-in-out; opacity: 0; visibility: hidden; max-height: 150px; overflow-y: auto;}
 .filterPop.filterPopShow{ opacity: 1; visibility: visible;}
  
-.filterPop strong{ display: block;  font-size: 16px;
-    font-style: normal;
-    font-weight: 500; color: #4F4F4F;}
-.filterPop a{ display: block; margin: 5px 0 0; font-size: 14px;
-    font-style: normal;
-    font-weight: 400; color: #4F4F4F; text-decoration: none;}
-    .filterPop a:hover{color: #0C9AFF;}
+.filterPop strong{ display: block;  font-size: 16px; font-style: normal; font-weight: 500; color: #4F4F4F;}
+.filterPop a{ display: block; margin: 5px 0 0; font-size: 14px; font-style: normal; font-weight: 400; color: #4F4F4F; text-decoration: none;}
+.filterPop a:hover{color: #0C9AFF;}
 
 .filterPopTrigger{ width: 15px; height: 15px; background: url(/src/assets/images/filter-icon.svg) no-repeat 50% 50%; margin-left: 25px; display: inline-block; color: transparent; font-size: 0; line-height: 0; cursor: pointer; }
 .moreLinkTrigger{ margin-left:8px; display: inline-block; width: 15px; height: 20px; background: url(/src/assets/images/threeDot.svg) no-repeat 90% 50%; color: transparent; font-size: 0; line-height: 0; cursor: pointer;}
@@ -219,7 +215,7 @@ font-style: normal; font-weight:600; text-align: center; margin-right: 8px;}
 .radioBtn_big input:checked ~ span {background: url(/src/assets/images/radioBtn3.svg) no-repeat 0 50%;}
 
 
-input[type=text] { padding: 7px 15px; background-color: #FFF;  border-radius: 4px; border: 1px solid  #E2E3E9; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #777;}
+input[type=text] { padding: 7px 15px; background-color: #FFF;  border-radius: 4px; border: 1px solid  #E2E3E9; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #282828;}
 input[type=text]:hover, input[type=text]:focus { border-color: #50D2FF !important; box-shadow: none !important;}
 
 .btn-primary {
@@ -298,11 +294,11 @@ h2{font-size: 16px !important; font-style: normal; font-weight: 400; margin-bott
 .phone-input-container>div{border-radius: 4px; background: #FFF; width:105px; margin-right:10px;}
 .phone-input-container>div .css-hlgwow{ padding: 2px 0 2px 10px;}
 .phone-input-container>div>div{box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); border: 1px solid #E2E3E9;}
-.phone-input-container input[type="tel"] {padding: 7px 15px; background-color: #FFF;  border-radius: 4px; border: 1px solid  #E2E3E9; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #777; flex-shrink: 1;}
+.phone-input-container input[type="tel"] {padding: 7px 15px; background-color: #FFF;  border-radius: 4px; border: 1px solid  #E2E3E9; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #282828; flex-shrink: 1;}
 
 .dateHolder{ display: flex; gap: 10px; width: 100%;}
 .dateHolder>*{ flex: 1 1 auto !important;}
-input[type="date"], input[type="email"] { padding: 7px 15px; background-color: #FFF; border-radius: 4px; border: 1px solid #E2E3E9;  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #777;}
+input[type="date"], input[type="email"] { padding: 7px 15px; background-color: #FFF; border-radius: 4px; border: 1px solid #E2E3E9;  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #282828;}
 
 /* input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {background: #FFF url(../src/assets/images/calender.svg) no-repeat 100% 50%;} */
@@ -311,7 +307,7 @@ input[type="date"]:focus, input[type="tel"]:focus, input[type="email"]:focus {bo
 
 .react-datepicker{color:#30323f; font-family: 'Lato', sans-serif; font-weight:400; font-size:13px; line-height:18px;}
 .calenderIcon{background: #FFF url(../src/assets/images/calender.svg) no-repeat 100% 50%; position: absolute; top: 4px; right: 8px;}
-.custom_date_input{}
+
 .custom_calendar{border-radius: 3px; border: 1px solid #CFCFCF; background: #FFF; box-shadow: 0px 6px 24px 0px rgba(115, 115, 119, 0.16); padding: 15px;}
 .react-datepicker__header{ background-color: transparent; border-bottom: none;}
 .react-datepicker__day-name{color: #A1A7C4; font-size:14px;}
@@ -327,6 +323,8 @@ input[type="date"]:focus, input[type="tel"]:focus, input[type="email"]:focus {bo
 .react-datepicker__navigation-icon::before { border-color: #7E84A3; border-width: 2px 2px 0 0;}
 .react-datepicker__navigation:hover *::before {border-color: #28B7FF;}
 .react-datepicker-popper .react-datepicker__triangle {fill: #ffffff; color: #ffffff;}
+.react-datepicker-wrapper{ width: 100%;}
+
 /* Optional: Style the container */
 .calendar-container {display: flex; flex-direction: column; align-items: flex-start;}
 

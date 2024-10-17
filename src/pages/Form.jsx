@@ -23,9 +23,18 @@ const selectCompany = [
 const customStyles = {
     menu: (provided, state) => ({
       ...provided,
-      top: '30px',  // Adjust the position here if needed
+      top: '30px',
       position: 'absolute',
+      fontSize: "14px",
+      fontFamily: 'Lato',
     }),
+    control: (base) => ({
+        ...base,
+        fontSize: "14px",
+        boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.06)',
+        border: '1px solid #E2E3E9'
+
+      }),
     
     dropdownIndicator: (provided, state) => ({
         ...provided,
@@ -152,9 +161,10 @@ return (
                     icon={"calenderIcon"}
                     className="custom_date_input"
                     calendarClassName="custom_calendar"
-                    placeholderText="Select a date"
+                    placeholderText="dd-mm-yyyy"
+                    dateFormat="dd-MM-yyyy" 
                     />
-                        </div>
+                    </div>
                     <div><label>To</label>
                     <DatePicker 
                     selected={endDate}  
@@ -163,7 +173,8 @@ return (
                     icon={"calenderIcon"}
                     className="custom_date_input"
                     calendarClassName="custom_calendar"
-                    placeholderText="Select a date"
+                    placeholderText="dd-mm-yyyy"
+                    dateFormat="dd-MM-yyyy" 
                     /></div>
                 </aside>
 
